@@ -16,7 +16,7 @@ setup(
     packages=find_packages(exclude="tests,"),
     classifiers=[
         "Development Status :: 4 - Beta",
-        "Programing Language :: Python :: 3",
+        "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ],
     python_requires='>=3',
