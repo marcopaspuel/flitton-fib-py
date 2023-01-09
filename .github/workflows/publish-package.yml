@@ -16,15 +16,15 @@ jobs:
       - name: Update Version
         run: python get_latest_version.py
       - name: Install Deployment Dependencies
-        if: github.event.pull_request.merged == True
+        if: github.event.pull_request.merged == true
         run: |
           pip install twine
           pip install pexpect
       - name: Packege Module
-        if: github.event.pull_request.merged == True
+        if: github.event.pull_request.merged == true
         run: python setup.py sdist
       - name: Deploy to PyPi
-        if: github.event.pull_request.merged == True
+        if: github.event.pull_request.merged == true
         env:
           PYPI_USER_NAME: $ {{secrets.PYPI_USER_NAME}}
           PYPI_PASSWORD: $ {{secrets.PYPI_PASSWORD}}
