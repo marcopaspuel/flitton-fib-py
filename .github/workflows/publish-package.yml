@@ -1,6 +1,6 @@
 name: Publish Python Distributions to PyPi
 on:
-  pull_reques:
+  pull_request:
     types: [closed]
     branches:
       - main
