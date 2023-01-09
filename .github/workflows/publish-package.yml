@@ -21,10 +21,10 @@ jobs:
           pip install twine
           pip install pexpect
       - name: Packege Module
-        if github.event.pull_request.merged == true
+        if: github.event.pull_request.merged == True
         run: python setup.py sdist
       - name: Deploy to PyPi
-        if github.event.pull_request.merged == true
+        if: github.event.pull_request.merged == True
         env:
           PYPI_USER_NAME: $ {{secrets.PYPI_USER_NAME}}
           PYPI_PASSWORD: $ {{secrets.PYPI_PASSWORD}}
